@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
-</head>
-<body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-  Download v1.3
-  What is it?
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet" />
 
-  01
-  Built for modern use
+    <!-- website style -->
+    <link rel="stylesheet" href="style.css" />
 
-  Smarter meetings, all in one place
+    <title>Frontend Mentor | Meet landing page</title>
+  </head>
+  <body>
+    <header class="logo">meet</header>
+    <section class="landing-page">
+      <img src="./assets/desktop/image-hero-left.png" alt="" />
+      <img src="./assets/desktop/image-hero-right.png" alt="" />
+      <div class="landing-Page__title">
+        <h1>Group Chat for Everyone</h1>
+        <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+        <button class="btn btn--download">Download v1.3</button>
+        <button class="btn btn--question">What is it?</button>
+      </div>
+    </section>
+    <div class="section--transition">01</div>
+    <section>
+      <div class="img-container">
+        <img src="./assets/desktop/image-woman-in-videocall.jpg" width="255px" height="242px" alt="" />
+        <img src="./assets/desktop/image-women-videochatting.jpg" width="255px" height="242px" alt="" />
+        <img src="./assets/desktop/image-men-in-meeting.jpg" width="255px" height="242px" alt="" />
+        <img src="./assets/desktop/image-man-texting.jpg" width="255px" height="242px" alt="" />
+      </div>
+      <p>Built for modern use</p>
+      <h2>Smarter meetings, all in one place</h2>
+      <p>
+        Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can
+        join with invite-only team access, data encryption, and data export.
+      </p>
+    </section>
 
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
-</body>
+    <div class="section--transition">02</div>
+    <footer>
+      <picture>
+        <source media="(max-width:375px)" srcset="./assets/mobile/image-footer.jpg" />
+        <source media="(max-width:768px)" srcset="./assets/tablet/image-footer.jpg" />
+        <img src="./assets/desktop/image-footer.jpg" alt="" />
+      </picture>
+      <h2>Experience more together</h2>
+      <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <button class="btn btn--download">Download v1.3</button>
+    </footer>
+  </body>
 </html>
