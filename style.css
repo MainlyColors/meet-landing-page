@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* outline: 3px red solid; */
+}
+
+:root {
+  --clr-primary: hsl(192, 37%, 48%);
+  --clr-secondary: hsl(268, 34%, 53%);
+  --clr-heading-text: hsl(240, 21%, 20%);
+  --clr-paragraph-text: hsl(240, 10%, 57%);
+
+  --clr-primary-accent: hsl(192, 90%, 77%);
+  --clr-secondary-accent: hsl(268, 100%, 86%);
+  --clr-neutral-text: hsl(0, 0, 98%);
+
+  --ff-primary: "Red Hat Display", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* body :not(footer) {
+  margin: 0 24px;
+} */
+
+/* body {
+  margin: 0 24px;
+} */
+
+h1,
+h2,
+p {
+  font-family: var(--ff-primary);
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--clr-heading-text);
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1em;
+}
+
+p {
+  color: var(--clr-paragraph-text);
+  line-height: 1.625em;
+}
+
+.landing-page {
+  overflow-x: hidden;
+}
+
+.landing-page img {
+  height: auto;
+  width: 199px;
+}
+
+section {
+  width: 100%;
+}
