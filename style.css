@@ -21,10 +21,14 @@
   --clr-btn-question-hover: hsla(267, 54%, 71%, 1);
 
   --ff-primary: "Red Hat Display", sans-serif;
+
+  /* responsive values */
+
+  --font-h1-max-size: 3em;
+  --font-p-max-width: 573px;
 }
 
 body {
-  /* margin: 0 24px 0; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -47,7 +51,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: clamp(1.5em, 10.7vw, var(--font-h1-max-size));
   line-height: 1.1em;
 }
 
@@ -62,30 +66,44 @@ header {
 }
 
 .landing-page {
-  overflow-x: hidden;
-}
-
-.landing-page div {
-  margin: 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.landing-page__img-container {
+  margin-bottom: clamp(48px, 9.4vw, 72px);
+  position: relative;
+  width: 100%;
+  height: clamp(114px, 40.8vw, 311px);
 }
 
 .landing-page img {
+  /* position: relative; */
   height: auto;
-  width: 199px;
-  margin-bottom: 48px;
+  width: clamp(140px, 53vw, 394px);
 }
 
 .landing-page img:first-of-type {
-  margin-left: -20px;
-  margin-right: 8px;
+  position: absolute;
+  top: 0;
+  left: -20px;
 }
 
 .landing-page img:last-of-type {
-  margin-right: -28px;
-  margin-left: 8px;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+
+.landing-Page__title {
+  margin: 0 24px 0 24px;
+  width: clamp(327px, 87.2vw, 457px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .landing-page h1 {
@@ -95,6 +113,14 @@ header {
 
 .landing-page p {
   margin-bottom: 32px;
+}
+
+/* button container */
+
+.landing-page__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*Button styles*/
@@ -164,7 +190,7 @@ header {
   position: relative;
   width: 56px;
   height: 56px;
-  margin: calc(84px + clamp(64px, 10.5vw, 110px)) 0 64px 0;
+  margin: calc(84px + clamp(64px, 10.5vw, 110px)) 0 clamp(64px, 8.72vw, 72px) 0;
   padding: 14px 0;
   font-family: var(--ff-primary);
   color: hsla(240, 10%, 57%, 1);
@@ -192,19 +218,26 @@ main {
 }
 
 .product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 24px;
 }
 
 .img-container {
-  margin-bottom: 64px; /*clamp here later*/
+  /* TODO - breaks between 375px and 768px*/
+  margin-bottom: 64px;
+  width: clamp(327px, 89.7vw, 1110px);
   height: 311px;
+  justify-content: space-between;
+  align-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  /* gap: 11px; */
 }
 
 .img-container img {
-  width: 151px;
+  width: clamp(151px, 21.4vw, 255px);
   height: auto;
   border-radius: 8px;
 }
@@ -218,11 +251,16 @@ main {
 }
 
 .product-section h2 {
-  margin-bottom: 1.125em;
-  font-size: 2em;
+  min-width: 327px;
+  max-width: 445px;
+  margin-bottom: 32px;
+  font-size: clamp(2em, 5.3vw, 2.5em);
   line-height: 1.125em;
 }
 
+.product-section__description {
+  width: clamp(327px, 74.6vw, var(--font-p-max-width));
+}
 /* footer */
 
 footer {
@@ -255,8 +293,9 @@ footer button {
 }
 
 footer h2 {
-  margin: 92px 0 24px 0;
-  font-size: 2em;
+  margin: 92px 0 clamp(24px, 4.2vw, 32px) 0;
+  width: clamp(327px, 60vw, 457px);
+  font-size: clamp(2em, 5.3vw, 2.5em);
   line-height: 1.125em;
 }
 
@@ -266,6 +305,42 @@ footer p {
 }
 
 footer p {
-  margin-bottom: 32px;
+  width: clamp(327px, 75vw, 573px);
+  margin-bottom: clamp(32px, 5.2vw, 40px);
   font-size: 1.125em;
+}
+
+/* media queries */
+
+/* tablet design */
+@media only screen and (min-width: 600px) {
+  .landing-page__btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: unset;
+    gap: 16px;
+  }
+
+  .img-container {
+    height: unset;
+    margin-bottom: 48px;
+  }
+
+  .product-section__slogan {
+    margin-bottom: 16px;
+  }
+
+  .footer-transition {
+    margin: 140px 0 -28px 0;
+  }
+}
+
+/* desktop design */
+@media only screen and (min-width: 1250px) {
+  :root {
+    --font-p-max-width: 540px;
+  }
+  .img-container {
+    margin-bottom: 80px;
+  }
 }
