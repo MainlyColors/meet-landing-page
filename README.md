@@ -1,88 +1,307 @@
-# Frontend Mentor - Meet landing page
+# Frontend Mentor - Meet landing page solution
 
-![Design preview for the Meet landing page coding challenge](./preview.jpg)
+This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+    - [CSS custom properties](#CSS-custom-properties)
+    - [Absolute IMG Positioning](#Absolute-IMG-Positioning)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+## Overview
 
-**To do this challenge, you need a decent understanding of HTML & CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+- Desktop Layout - shown on 2560px screen
 
-Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
+![](screenshots\desktop-layout.png)
 
-All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+- Desktop Layout - shown on 1440px screen
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
+![](screenshots\desktop-layout-1440.png)
 
-## Building your project
+- tablet Layout - vertical
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+![](screenshots\tablet-vertical-layout.png)
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- tablet Layout - horizontal
 
-## Deploying your project
+![](screenshots\tablet-horiztonal-layout.png)
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- mobile Layout
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+![](screenshots\mobile-layout.png)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Links
 
-## Create a custom `README.md`
+- Solution URL: [Frontend Mentor Submission](https://your-solution-url.com)
+- Live Site URL: [Github Pages.io](https://mainlycolors.github.io/meet-landing-page/)
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## My process
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Built with
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS calc functions
+- Flexbox
+- Mobile-first workflow
 
-## Submitting your solution
+### What I learned
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## CSS custom properties
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- I was using CSS custom properties before this project but only for things like color and font-family's. during this projects I played more with the idea of using them to set max widths on element limits when a clamp from the mobile to desktop design was too much.
 
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
+- For the design the h1 needs a font-size of:
 
-## Sharing your solution
+  - Mobile layout: 24px
+  - Tablet layout: 48px
+  - Desktop layout: 64px
 
-There are multiple places you can share your solution:
+- Where my layouts are defined as:
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  - Mobile layout width: 375px
+  - Tablet layout width: 768px
+  - Desktop layout width: 1440px
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+- To achieve this I first wrote `font-size: clamp(1.5em, 10.7vw, 64px)` but this is hard to balance for 3 separate designs and the in-between of each of those. so to fix this we use a CSS custom property to define the max value of the clamp to be 48px then redefine it through a media query for the desktop layout.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- By doing this we still take advantage of a clamp supporting responsive font sizing between the layouts and at the smallest and largest layout.
 
-## Got feedback for us?
+```css
+:root {
+  --font-h1-max-size: 3em;
+}
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+h1 {
+  font-size: clamp(1.5em, 10.7vw, var(--font-h1-max-size));
+  line-height: 1.1em;
+}
 
-**Have fun building!** 🚀
+@media only screen and (min-width: 1140px) {
+  :root {
+    --font-h1-max-size: 4em;
+  }
+}
+```
+
+## Absolute IMG Positioning
+
+- The biggest challenge in this design was the header hero `<img>` was in 2 halves because in the mobile/tablet view, they had to come together to form a banner and in the desktop view have to split to allow text between the `<img>`'s.
+
+- Mobile Layout
+  ![](screenshots\hero-img-mobile-readme.JPG)
+
+- Desktop Layout
+  ![](screenshots\hero-img-desktop-readme.JPG)
+
+- I tried many different approaches on this and over complicated it a ton. when I first started, I tried to implement the `<img>` without using absolute positioning because I never considered it. My first attempt looked like this.
+
+# Attempt 1 ❌❌❌
+
+HTML
+
+```html
+<section class="landing-page">
+  <img src="./assets/desktop/image-hero-left.png" alt="" />
+  <img src="./assets/desktop/image-hero-right.png" alt="" />
+  <div class="landing-Page__title">
+    <h1>Group Chat for Everyone</h1>
+    <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+    <button class="btn btn--download">Download v1.3</button>
+    <button class="btn btn--question">What is it?</button>
+  </div>
+</section>
+```
+
+CSS
+
+```css
+.landing-page {
+  overflow-x: hidden;
+}
+
+.landing-page img {
+  height: auto;
+  width: 199px;
+  margin-bottom: 48px;
+}
+
+.landing-page img:first-of-type {
+  margin-left: -20px;
+  margin-right: 8px;
+}
+
+.landing-page img:last-of-type {
+  margin-right: -28px;
+  margin-left: 8px;
+}
+```
+
+- I think this worked but it was very hardcoded for the mobile layout and the next question was how do I separate the images as the screen gets larger.
+
+- After some research I learned position: absolute might be the fix I need but the issue with absolute elements is they are taken out of the document/website flow so they will end up on top of normal default positioned static elements. To fix this people house the absolute element within a static container so the width and height can still be controlled and will still effect the elements around it.
+
+# Attempt 2 ❌❌❌
+
+HTML - added img container
+
+```html
+<section class="landing-page">
+  <div class="landing-page__img-container">
+    <img src="./assets/desktop/image-hero-left.png" alt="" />
+    <img src="./assets/desktop/image-hero-right.png" alt="" />
+  </div>
+  <div class="landing-Page__title">
+    <h1>Group Chat for Everyone</h1>
+    <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+    <button class="btn btn--download">Download v1.3</button>
+    <button class="btn btn--question">What is it?</button>
+  </div>
+</section>
+```
+
+CSS
+
+```css
+.landing-page {
+  overflow-x: hidden;
+}
+
+.landing-page__img-container {
+  margin-bottom: clamp(48px, 9.4vw, 72px);
+  position: relative;
+  width: 100%;
+  height: clamp(114px, 40.8vw, 311px);
+}
+
+.landing-page img {
+  height: auto;
+  width: clamp(140px, 53vw, 394px);
+}
+
+.landing-page img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+.landing-page img:last-of-type {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+```
+
+- In this attempt the margins are removed from the `<img>`'s because the margin was used to push the landing page text down but since absolute elements are removed from the document flow, this no longer works. Instead we create an `<img>` container and apply all our size/position constraints on there. With this attempt the `<img>`'s are more responsive with sizing based on view-width units and clamps. And with this attempt, as the screen gets wider the `<img>`'s will forever separate.
+
+- To handle the desktop layout where text comes up to get sandwiched by 2 `<img>`'s, I used a media query to remove the height on the `<img>` container.
+
+```css
+@media only screen and (min-width: 1140px) {
+  .landing-page__img-container {
+    margin: unset;
+    height: unset;
+  }
+}
+```
+
+- After this I thought I was done and solved the issue but a new issue arose, between the tablet and desktop screen widths there wasn't enough space for the text to fit up next to the `<img>`'s but there was too much whitespace between them so it looked bad. Had to try again.
+
+# Attempt 3 ❌❌❌
+
+```css
+@media only screen and (min-width: 800px) and (max-width: 1140px) {
+  .landing-page img:first-of-type {
+    /* left: clamp(-220px, 27.5vw * -1, -70px); */
+    /* left: clamp(-70px, 27.5vw * -1, -220px); */
+    left: unset;
+    right: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
+
+    /*left: -200px;*/ /* 800px = -200, 900px = -180, 1000px =  -130, 1140px = 70 */
+  }
+
+  .landing-page img:last-of-type {
+    /* right: clamp(-220px, 27.5vw * -1, -70px); */
+    right: unset;
+    left: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
+  }
+}
+```
+
+- So this is where I really started overcomplicating it, I was trying to move the `<img>`'s away from the text outside the body so instead of (6) faces shown, it would show (2) then (4) then (6) on either side as the screen width grew larger and after 1140px width, the next media query takes over because it works there. But this was not working at all for me and I was getting no where so I took a break on it.
+
+# Attempt 4 ✔✔✔
+
+HTML
+
+```html
+<section class="landing-page">
+  <div class="landing-page__img-container">
+    <div class="landing-page__hero-left">
+      <img src="./assets/desktop/image-hero-left.png" alt="" />
+    </div>
+    <div class="landing-page__hero-right">
+      <img src="./assets/desktop/image-hero-right.png" alt="" />
+    </div>
+  </div>
+</section>
+```
+
+CSS
+
+```css
+@media only screen and (min-width: 800px) and (max-width: 1140px) {
+  .landing-page__img-container {
+    margin: unset;
+    height: unset;
+  }
+
+  .landing-page__hero-left {
+    margin-right: 14.3125rem;
+  }
+
+  .landing-page__hero-right {
+    margin-left: 14.3125rem;
+  }
+
+  .landing-page__hero-left img {
+    left: unset;
+    right: 0;
+  }
+
+  .landing-page__hero-right img {
+    right: unset;
+    left: 0;
+  }
+}
+```
+
+- I realized I need to stop trying so hard and let the browser take care of it for me. So I added (2) new `<img>` containers to the already existing container to act as base points for the left and right hero img. then at sizes where the text needs to come between, I anchor the hero `<img>`'s towards the center with the left hero set to `right: 0;` and the right hero set to `left: 0;`
+
+- The `margin-right: 14.3125rem;` was to make room for text to be there.
+
+### Continued development
+
+- In the future I want to focus on moving forward with the first solution I come up with, I have a bad habit of trying to force some way to work thinking I don't want to take the easy way out but it severely holds up progress that could be made.
+
+## Author
+
+- Frontend Mentor - [@ryan2505](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@MainlyColors](https://www.twitter.com/mainlycolors)
