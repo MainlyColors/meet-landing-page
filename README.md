@@ -29,23 +29,23 @@ Users should be able to:
 
 - Desktop Layout - shown on 2560px screen
 
-![](screenshots\desktop-layout.png)
+![](screenshots/desktop-layout.png)
 
 - Desktop Layout - shown on 1440px screen
 
-![](screenshots\desktop-layout-1440.png)
+![](screenshots/desktop-layout-1440.png)
 
 - tablet Layout - vertical
 
-![](screenshots\tablet-vertical-layout.png)
+![](screenshots/tablet-vertical-layout.png)
 
 - tablet Layout - horizontal
 
-![](screenshots\tablet-horiztonal-layout.png)
+![](screenshots/tablet-horiztonal-layout.png)
 
 - mobile Layout
 
-![](screenshots\mobile-layout.png)
+![](screenshots/mobile-layout.png)
 
 ### Links
 
