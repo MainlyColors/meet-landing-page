@@ -49,7 +49,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Submission](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/mobile-first-using-htmlcss-feedback-welcomed-Qy55WtBNs)
 - Live Site URL: [Github Pages.io](https://mainlycolors.github.io/meet-landing-page/)
 
 ## My process
