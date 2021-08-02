@@ -26,6 +26,11 @@
 
   --font-h1-max-size: 3em;
   --font-p-max-width: 573px;
+  --font-footer-p-max-width: 573px;
+
+  --img-container-max-width: 689px;
+  --img-hero-max-width: 394px;
+  --img-hero-max-container-height: 311px;
 }
 
 body {
@@ -65,6 +70,12 @@ header {
   margin: 48px 0 54px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -77,25 +88,25 @@ header {
   margin-bottom: clamp(48px, 9.4vw, 72px);
   position: relative;
   width: 100%;
-  height: clamp(114px, 40.8vw, 311px);
+  height: clamp(114px, 40.8vw, var(--img-hero-max-container-height));
 }
 
 .landing-page img {
   /* position: relative; */
   height: auto;
-  width: clamp(140px, 53vw, 394px);
+  width: clamp(140px, 53vw, var(--img-hero-max-width));
 }
 
 .landing-page img:first-of-type {
   position: absolute;
   top: 0;
-  left: -20px;
+  left: clamp(-32px, 3.38vw * -1, -20px);
 }
 
 .landing-page img:last-of-type {
   position: absolute;
   top: 0;
-  right: -20px;
+  right: clamp(-32px, 3.38vw * -1, -20px);
 }
 
 .landing-Page__title {
@@ -107,7 +118,7 @@ header {
 }
 
 .landing-page h1 {
-  margin-bottom: 24px;
+  margin-bottom: clamp(24px, 3.12vw, 34px);
   width: 10ch;
 }
 
@@ -211,12 +222,6 @@ header {
 
 /* main section */
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .product-section {
   display: flex;
   flex-direction: column;
@@ -226,14 +231,13 @@ main {
 
 .img-container {
   /* TODO - breaks between 375px and 768px*/
-  margin-bottom: 64px;
-  width: clamp(327px, 89.7vw, 1110px);
+  margin: 0 0 64px 0;
+  /* width: clamp(327px, 89.7vw, var(--img-container-max-width)); */
   height: 311px;
-  justify-content: space-between;
-  align-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  /* gap: 11px; */
+  justify-content: center;
+  gap: 25px;
 }
 
 .img-container img {
@@ -305,12 +309,19 @@ footer p {
 }
 
 footer p {
-  width: clamp(327px, 75vw, 573px);
+  width: clamp(327px, 75vw, var(--font-footer-p-max-width));
   margin-bottom: clamp(32px, 5.2vw, 40px);
   font-size: 1.125em;
 }
 
 /* media queries */
+
+/* older/smaller phones than 375px */
+@media only screen and (max-width: 350px) {
+  .landing-Page__title {
+    margin: unset;
+  }
+}
 
 /* tablet design */
 @media only screen and (min-width: 600px) {
@@ -324,6 +335,7 @@ footer p {
   .img-container {
     height: unset;
     margin-bottom: 48px;
+    gap: 11px;
   }
 
   .product-section__slogan {
@@ -335,12 +347,76 @@ footer p {
   }
 }
 
-/* desktop design */
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 800px) {
   :root {
-    --font-p-max-width: 540px;
+    --img-container-max-width: 1110px;
   }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1140px) {
+  :root {
+    /* --img-hero-max-width: 504px; */
+    --img-hero-max-container-height: 415px;
+  }
+
+  .landing-page__img-container {
+    margin: unset;
+    height: unset;
+  }
+
+  .landing-page img:first-of-type {
+    /* left: clamp(-220px, 27.5vw * -1, -70px); */
+    /* left: clamp(-70px, 27.5vw * -1, -220px); */
+    left: unset;
+    right: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
+
+    /*left: -200px;*/ /* 800px = -200, 900px = -180, 1000px =  -130, 1140px = 70 */
+  }
+
+  .landing-page img:last-of-type {
+    /* right: clamp(-220px, 27.5vw * -1, -70px); */
+    right: unset;
+    left: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
+  }
+}
+
+/* desktop design */
+@media only screen and (min-width: 1140px) {
+  :root {
+    --font-h1-max-size: 4em;
+    --font-p-max-width: 540px;
+    --font-footer-p-max-width: 350px;
+  }
+
+  .landing-page__img-container {
+    margin: unset;
+    height: unset;
+  }
+
   .img-container {
     margin-bottom: 80px;
+    gap: 25px;
+  }
+
+  footer {
+    padding: 0 165px;
+    height: 308px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer h2,
+  footer p {
+    margin: unset;
+    text-align: left;
+  }
+
+  footer h2 {
+    margin-right: 124px;
+    width: 350px;
+  }
+
+  footer p {
+    margin-right: 91px;
   }
 }
