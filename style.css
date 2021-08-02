@@ -20,7 +20,7 @@
   --clr-btn-download-hover: hsla(192, 54%, 64%, 1);
   --clr-btn-question-hover: hsla(267, 54%, 71%, 1);
 
-  --ff-primary: "Red Hat Display", sans-serif;
+  --ff-primary: 'Red Hat Display', sans-serif;
 
   /* responsive values */
 
@@ -82,13 +82,25 @@ main {
   align-items: center;
   overflow-x: hidden;
   width: 100vw;
+  min-height: 303px;
 }
 
 .landing-page__img-container {
+  display: flex;
   margin-bottom: clamp(48px, 9.4vw, 72px);
-  position: relative;
   width: 100%;
+  max-width: 1440px;
   height: clamp(114px, 40.8vw, var(--img-hero-max-container-height));
+}
+
+.landing-page__hero-left {
+  width: 50%;
+  position: relative;
+}
+
+.landing-page__hero-right {
+  width: 50%;
+  position: relative;
 }
 
 .landing-page img {
@@ -97,13 +109,13 @@ main {
   width: clamp(140px, 53vw, var(--img-hero-max-width));
 }
 
-.landing-page img:first-of-type {
+.landing-page__hero-left img {
   position: absolute;
   top: 0;
   left: clamp(-32px, 3.38vw * -1, -20px);
 }
 
-.landing-page img:last-of-type {
+.landing-page__hero-right img {
   position: absolute;
   top: 0;
   right: clamp(-32px, 3.38vw * -1, -20px);
@@ -191,7 +203,7 @@ main {
   position: absolute;
   left: 50%;
   bottom: 100%;
-  content: "";
+  content: '';
   width: 2px;
   height: 84px;
   background-color: hsla(240, 10%, 57%, 0.25);
@@ -285,8 +297,9 @@ footer img {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0.1;
+  object-fit: cover;
 }
 
 footer p,
@@ -357,6 +370,7 @@ footer p {
   :root {
     /* --img-hero-max-width: 504px; */
     --img-hero-max-container-height: 415px;
+    --font-footer-p-max-width: 350px;
   }
 
   .landing-page__img-container {
@@ -364,19 +378,42 @@ footer p {
     height: unset;
   }
 
-  .landing-page img:first-of-type {
-    /* left: clamp(-220px, 27.5vw * -1, -70px); */
-    /* left: clamp(-70px, 27.5vw * -1, -220px); */
-    left: unset;
-    right: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
-
-    /*left: -200px;*/ /* 800px = -200, 900px = -180, 1000px =  -130, 1140px = 70 */
+  .landing-page__hero-left {
+    margin-right: 14.3125rem;
   }
 
-  .landing-page img:last-of-type {
-    /* right: clamp(-220px, 27.5vw * -1, -70px); */
+  .landing-page__hero-right {
+    margin-left: 14.3125rem;
+  }
+
+  .landing-page__hero-left img {
+    left: unset;
+    right: 0;
+  }
+
+  .landing-page__hero-right img {
     right: unset;
-    left: calc(100vw - 394px + clamp(70px, 6.36vw, 220px));
+    left: 0;
+  }
+
+  footer {
+    height: 308px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer img {
+    width: unset;
+    height: 100%;
+  }
+
+  footer h2,
+  footer p,
+  footer button {
+    margin: 0;
+    padding: 0;
+    text-align: left;
   }
 }
 
